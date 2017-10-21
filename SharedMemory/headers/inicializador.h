@@ -5,6 +5,5 @@
 
 
 void inicializar();
-void sem_test(char *argv[]);
 
 #endif //SHAREDMEMORY_INICIALIZADOR_H

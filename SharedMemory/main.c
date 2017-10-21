@@ -13,8 +13,7 @@ int main(int argc, char **argv) {
 
     if (strcmp(modo_programa, "inic") == 0)
     {
-        //inicializar();
-        sem_test(argv);
+        inicializar();
     }
 
     else if (strcmp(modo_programa, "prod") == 0)

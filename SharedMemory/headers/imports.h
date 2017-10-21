@@ -14,6 +14,10 @@
 #include "productor.h"
 #include "espia.h"
 #include "finalizador.h"
+#include "herramientas.h"
+#include "list.h"
+#include "pagina.h"
+#include "segmento.h"
 
 // Memoria Compartida
 #include <sys/types.h>
@@ -23,9 +27,7 @@
 // Semaforos
 #include <semaphore.h>
 #include <sys/stat.h>
-#include <fcntl.h>
-#include <asm/errno.h>
-#include <assert.h>
+#include <sys/sem.h>
 
 
 // Variables globales
