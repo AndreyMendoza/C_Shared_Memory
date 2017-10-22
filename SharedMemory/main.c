@@ -13,7 +13,9 @@ int main(int argc, char **argv) {
 
     if (strcmp(modo_programa, "inic") == 0)
     {
-        inicializar();
+        /*Cantidad de espacios de memoria que va haber*/
+        int size = 2048;
+        inicializar(size);
     }
 
     else if (strcmp(modo_programa, "prod") == 0)

@@ -1,7 +1,7 @@
 #include "../headers/inicializador.h"
 
 
-void inicializar()
+void inicializar(int size)
 {
     int shm_id;
     char* shm_addr;
@@ -10,7 +10,9 @@ void inicializar()
     // Solicitar espacio de memoria compartida
     printf("Solicitando espacio de memoria...");
 
-    shm_id = shmget(IPC_PRIVATE, 2048, IPC_CREAT | IPC_EXCL | 0600);
+    //int shmget(key_t key, int size, int flags);
+    shm_id = shmget(IPC_PRIVATE, size, IPC_CREAT | IPC_EXCL | 0600);
+
     if (shm_id == -1) {
         perror("FAILED\n");
         exit(1);
