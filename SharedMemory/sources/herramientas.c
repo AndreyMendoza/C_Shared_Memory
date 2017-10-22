@@ -87,4 +87,19 @@ int read_int(char * file_name)
     return atoi(buff);
 }
 
+
 /*--------------------------------------------------------------------------------------------------------------------*/
+void registrar_accion(char * file_name, char * registro){
+    FILE *fptr;
+
+    //Se abre con "a" para realizar un append en el archivo
+    fptr = fopen(file_name, "a");
+    if(fptr == NULL)
+    {
+        printf("Error opening file!");
+        exit(1);
+    }
+
+    fprintf(fptr,"\n%s", registro);
+    fclose(fptr);
+}
