@@ -1,57 +1,44 @@
 #include "../headers/herramientas.h"
 
 
+/*####################################################################################################################*/
+/*###############################################    Memoria    ######################################################*/
+/*####################################################################################################################*/
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-int random_number(int min_num, int max_num)
+int solicitar_mem()
 {
-    int result = 0, low_num = 0, hi_num = 0;
+    int shm_id;
 
-    if (min_num < max_num)
-    {
-        low_num = min_num;
-        hi_num = max_num + 1; // include max_num in output
-    } else {
-        low_num = max_num + 1; // include max_num in output
-        hi_num = min_num;
-    }
-
-    srand(time(NULL));
-    result = (rand() % (hi_num - low_num)) + low_num;
-    return result;
-}
-
-
-
-/*--------------------------------------------------------------------------------------------------------------------*/
-
-void sem_lock(int sem_set_id)
-{
-    FILE *file = fopen(file_name, "w");
-    if (file == NULL)
-    {
-        printf("Error opening file!\n");
+    printf("Solicitando espacio de memoria...");
+    shm_id = shmget(IPC_PRIVATE, SEGMENTSIZE, IPC_CREAT | IPC_EXCL | SEGMENTPERM);
+    if (shm_id == -1) {
+        perror("ERROR\n");
         exit(1);
     }
-    fprintf(file, "%d", num);
-    fclose(file);
+    printf("OK. ID: %d\n", shm_id);
+    return shm_id;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-int read_int(char * file_name)
+void * asociar_mem(int shm_id)
 {
-    FILE *file;
-    char buff[255];
+    void * shm_addr;
 
-    file = fopen(file_name, "r");
-    fscanf(file, "%s", buff);
-    fclose(file);
+    printf("Asociando a espacio de memoria %d...", shm_id);
+    shm_addr = shmat(shm_id, NULL, 0);
+    if (!shm_addr) { /* operation failed. */
+        printf("ERROR\n");
+        exit(1);
+    }
+    printf("OK\n");
 
-    return atoi(buff);
+    return shm_addr;
 }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
+/*####################################################################################################################*/
+/*###############################################   Semaforos   ######################################################*/
+/*####################################################################################################################*/
 
 void * solicitar_sem(char * nombre_sem)
 {
@@ -156,6 +143,9 @@ void operar_semaforo(void * sem_ref, int operacion)
     printf("OK\n");
 }
 
+/*####################################################################################################################*/
+/*###############################################   Generales   ######################################################*/
+/*####################################################################################################################*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 void registrar_accion(char * file_name, char * registro){
@@ -172,3 +162,52 @@ void registrar_accion(char * file_name, char * registro){
     fprintf(fptr,"\n%s", registro);
     fclose(fptr);
 }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+int random_number(int min_num, int max_num)
+{
+    int result = 0, low_num = 0, hi_num = 0;
+
+    if (min_num < max_num)
+    {
+        low_num = min_num;
+        hi_num = max_num + 1; // include max_num in output
+    } else {
+        low_num = max_num + 1; // include max_num in output
+        hi_num = min_num;
+    }
+
+    srand(time(NULL));
+    result = (rand() % (hi_num - low_num)) + low_num;
+    return result;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+void save_int(int num, char * file_name)
+{
+    FILE *file = fopen(file_name, "w");
+    if (file == NULL)
+    {
+        printf("Error opening file!\n");
+        exit(1);
+    }
+    fprintf(file, "%d", num);
+    fclose(file);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+int read_int(char * file_name)
+{
+    FILE *file;
+    char buff[255];
+
+    file = fopen(file_name, "r");
+    fscanf(file, "%s", buff);
+    fclose(file);
+
+    return atoi(buff);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/

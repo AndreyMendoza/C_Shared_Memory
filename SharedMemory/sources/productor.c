@@ -21,5 +21,5 @@ void producir()
 
     desbloquear_sem(sem);
 
-    //cerrar_sem(sem);
+    cerrar_sem(sem);
 }
