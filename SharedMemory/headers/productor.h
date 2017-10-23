@@ -4,7 +4,8 @@
 #include "imports.h"
 
 
-void producir();
+
+void producir(char * tipoAlgoritmo, int distribucion_generador);
 
 
 #endif //SHAREDMEMORY_PRODUCTOR_H
