@@ -6,11 +6,12 @@
 typedef struct Pagina{
 
     int pag_logica;
-    int pag_fisica;
+    int estado;
+    pthread_t thread_id;
 
 } Pagina;
 
 
-void agregar_pagina(int * n_paginas, Pagina * memoria, int pag_logica, int pag_fisica);
+void agregar_pagina(int * n_paginas, int * n_paginas_disp, Pagina * memoria, int pag_logica);
 
 #endif //SHAREDMEMORY_PAGINA_H

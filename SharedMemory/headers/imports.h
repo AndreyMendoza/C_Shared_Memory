@@ -18,6 +18,9 @@
 #include "list.h"
 #include "pagina.h"
 #include "segmento.h"
+#include <pthread.h>
+#include <stdbool.h>
+#include <unistd.h>
 
 // Memoria Compartida
 #include <sys/types.h>
@@ -35,6 +38,9 @@
 #define SEGMENTSIZE 2048
 #define SEGMENTPERM 0666
 #define SEM_NAME    "/Prueba"
+#define OCUPADO     0
+#define DISPONIBLE  1
+#define OFFSET      (sizeof(int) * 2)
 
 
 #endif //SHAREDMEMORY_BIBLIOTECAS_H
