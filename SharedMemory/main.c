@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
         // estará determinada por un tiempo aleatorio(30s-60s)
         int distribucion_generador = random_number(30,60);
 
-        producir(atoi(argv[1]));
+        producir();
     }
 
     else if (strcmp(modo_programa, "espia") == 0){

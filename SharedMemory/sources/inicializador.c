@@ -23,7 +23,6 @@ void inicializar(int size)
     add(memoria, &shm_id);
 
     printf("VALOR: %d\n", *(int *)pop(memoria));
-    getchar();
 
     // cerrar_sem(sem);
 
