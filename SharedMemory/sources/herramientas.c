@@ -1,9 +1,31 @@
 #include "../headers/herramientas.h"
 
 
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+int random_number(int min_num, int max_num)
+{
+    int result = 0, low_num = 0, hi_num = 0;
+
+    if (min_num < max_num)
+    {
+        low_num = min_num;
+        hi_num = max_num + 1; // include max_num in output
+    } else {
+        low_num = max_num + 1; // include max_num in output
+        hi_num = min_num;
+    }
+
+    srand(time(NULL));
+    result = (rand() % (hi_num - low_num)) + low_num;
+    return result;
+}
+
+
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-void save_int(int num, char * file_name)
+void sem_lock(int sem_set_id)
 {
     FILE *file = fopen(file_name, "w");
     if (file == NULL)
@@ -134,39 +156,19 @@ void operar_semaforo(void * sem_ref, int operacion)
     printf("OK\n");
 }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-
-int solicitar_mem()
-{
-    int shm_id;
-
-    // Solicitar espacio de memoria compartida
-    printf("Solicitando espacio de memoria...");
-    shm_id = shmget(IPC_PRIVATE, SEGMENTSIZE, IPC_CREAT | IPC_EXCL | SEGMENTPERM);
-    if (shm_id == -1) {
-        perror("ERROR\n");
-        exit(1);
-    }
-    printf("OK. ID: %d\n", shm_id);
-
-    return shm_id;
-}
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+void registrar_accion(char * file_name, char * registro){
+    FILE *fptr;
 
-void * asociar_mem(int shm_id)
-{
-    void * shm_addr;
-
-    // Asociar segmento de memoria al proceso
-    printf("Asociando a espacio de memoria %d...", shm_id);
-    shm_addr = shmat(shm_id, NULL, 0);
-    if (!shm_addr) { /* operation failed. */
-        printf("ERROR\n");
+    //Se abre con "a" para realizar un append en el archivo
+    fptr = fopen(file_name, "a");
+    if(fptr == NULL)
+    {
+        printf("Error opening file!");
         exit(1);
     }
-    printf("OK\n");
 
-    return shm_addr;
+    fprintf(fptr,"\n%s", registro);
+    fclose(fptr);
 }
-

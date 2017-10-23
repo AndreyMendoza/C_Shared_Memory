@@ -1,7 +1,7 @@
 #include "../headers/inicializador.h"
 
 
-void inicializar()
+void inicializar(int size)
 {
     int shm_id, result;
     void * shm_addr;

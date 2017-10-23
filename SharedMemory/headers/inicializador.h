@@ -4,6 +4,6 @@
 #include "imports.h"
 
 
-void inicializar();
+void inicializar(int size);
 
 #endif //SHAREDMEMORY_INICIALIZADOR_H
