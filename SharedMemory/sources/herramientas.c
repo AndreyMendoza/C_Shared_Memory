@@ -11,7 +11,8 @@ int solicitar_mem()
 
     printf("Solicitando espacio de memoria...");
     shm_id = shmget(IPC_PRIVATE, SEGMENTSIZE, IPC_CREAT | IPC_EXCL | SEGMENTPERM);
-    if (shm_id == -1) {
+    if (shm_id == -1)
+    {
         perror("ERROR\n");
         exit(1);
     }
@@ -27,7 +28,8 @@ void * asociar_mem(int shm_id)
 
     printf("Asociando a espacio de memoria %d...", shm_id);
     shm_addr = shmat(shm_id, NULL, 0);
-    if (!shm_addr) { /* operation failed. */
+    if (!shm_addr)
+    {
         printf("ERROR\n");
         exit(1);
     }

@@ -23,7 +23,7 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
 
     sem_t * sem = NULL;
     int shm_id;
-    List * memoria;
+    Pagina * memoria;
     void * shm_addr;
 
     sem = (sem_t *) solicitar_sem(SEM_NAME);
@@ -32,10 +32,8 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
 
     shm_id = read_int("../data/shm_id.txt");
     shm_addr = asociar_mem(shm_id);
-    memoria = (List *) shm_addr;
 
-    int a = *(int *) pop(memoria);
-    printf("SHM_ID: %d", a);
+    printf("Cantidad de celdas: %d\n", *((int *) shm_addr));
 
     desbloquear_sem(sem);
 

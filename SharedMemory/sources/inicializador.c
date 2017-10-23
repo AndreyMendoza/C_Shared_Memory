@@ -3,10 +3,10 @@
 
 void inicializar(int size)
 {
-    int shm_id, result;
+    int shm_id, *n_celdas;
     void * shm_addr;
     sem_t * sem = NULL;
-    List * memoria;
+    Pagina * memoria;
 
 
     // Inicializar el semaforo
@@ -18,11 +18,15 @@ void inicializar(int size)
     shm_addr = asociar_mem(shm_id);
 
     // Guardar lista que va a contener estructura de la memoria
-    memoria = (List *) shm_addr;
-    memoria = new_list();
-    add(memoria, &shm_id);
+    n_celdas = (int *) shm_addr;
+    *n_celdas = 0;
+    memoria = (Pagina *) (shm_addr + sizeof(int));
 
-    printf("VALOR: %d\n", *(int *)pop(memoria));
+//    agregar_pagina(n_celdas, memoria, 1, 1000);
+//    agregar_pagina(n_celdas, memoria, 2, 2000);
+//
+//    printf("P.Logica: %d | P.Fisica:%d\n", memoria[0].pag_logica, memoria[0].pag_fisica);
+//    printf("P.Logica: %d | P.Fisica:%d\n", memoria[1].pag_logica, memoria[1].pag_fisica);
 
     // cerrar_sem(sem);
 

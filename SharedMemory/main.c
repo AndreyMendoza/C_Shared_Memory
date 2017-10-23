@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
     if (strcmp(modo_programa, "inic") == 0)
     {
         /*Cantidad de espacios de memoria que va haber*/
-        if(argc<2){
+        if(argc < 2){
             printf("Parámetros incompletos, falta el tamaño de la memoria\n");
         }else{
             int size = atoi(argv[1]);

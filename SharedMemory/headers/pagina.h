@@ -4,12 +4,13 @@
 #include "imports.h"
 
 typedef struct Pagina{
-    int *pag_logica;
-    int *pag_fisica;
+
+    int pag_logica;
+    int pag_fisica;
 
 } Pagina;
 
 
-void * new_pagina(int * pag_logica, int * pag_fisica);
+void agregar_pagina(int * n_paginas, Pagina * memoria, int pag_logica, int pag_fisica);
 
 #endif //SHAREDMEMORY_PAGINA_H
