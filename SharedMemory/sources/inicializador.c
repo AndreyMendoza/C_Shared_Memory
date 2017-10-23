@@ -3,26 +3,30 @@
 
 void inicializar()
 {
-    int shm_id;
-    char* shm_addr;
+    int shm_id, result;
+    void * shm_addr;
+    sem_t * sem = NULL;
+    List * memoria;
 
 
-    // Solicitar espacio de memoria compartida
-    printf("Solicitando espacio de memoria...");
+    // Inicializar el semaforo
+    sem = (sem_t *) solicitar_sem(SEM_NAME);
 
-    shm_id = shmget(IPC_PRIVATE, 2048, IPC_CREAT | IPC_EXCL | 0600);
-    if (shm_id == -1) {
-        perror("FAILED\n");
-        exit(1);
-    }
-    printf("OK. ID: %d\n", shm_id);
+    // Crear espacio de memoria compartida
+    shm_id = solicitar_mem();
+    save_int(shm_id, "../data/shm_id.txt");
+    shm_addr = asociar_mem(shm_id);
 
-    // Asociar segmento de memoria al proceso
-    printf("Asociando espacio de memoria...");
-    shm_addr = shmat(shm_id, NULL, 0);
-    if (!shm_addr) { /* operation failed. */
-        printf("FAILED\n");
-        exit(1);
-    }
+    // Guardar lista que va a contener estructura de la memoria
+    memoria = (List *) shm_addr;
+    memoria = new_list();
+    add(memoria, &shm_id);
+
+    printf("VALOR: %d\n", *(int *)pop(memoria));
+    getchar();
+
+    // cerrar_sem(sem);
 
 }
+
+

@@ -4,7 +4,7 @@
 #include "imports.h"
 
 
-void producir(int shm_id);
+void producir();
 
 
 #endif //SHAREDMEMORY_PRODUCTOR_H

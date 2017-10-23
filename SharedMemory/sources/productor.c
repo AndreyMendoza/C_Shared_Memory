@@ -1,49 +1,25 @@
 #include "../headers/productor.h"
 
 
-void producir(int shm_id)
+void producir()
 {
-    int *mem;
-    sem_t  *sp;
-    int retval, err;
+    sem_t * sem = NULL;
+    int shm_id;
+    List * memoria;
+    void * shm_addr;
 
-    printf("SHM_ID = %d\n", shm_id);
+    sem = (sem_t *) solicitar_sem(SEM_NAME);
 
-    // Asociarse al segmento
-    printf("Asociandose a memoria...");
-    sp = (sem_t*) shmat(shm_id, (void *)0, 0);
-    if ((int)mem == -1)
-        printf("ERROR\n");
-    else
-        printf("OK. Contenido = %d\n", *mem);
+    bloquear_sem(sem);
 
+    shm_id = read_int("../data/shm_id.txt");
+    shm_addr = asociar_mem(shm_id);
+    memoria = (List *) shm_addr;
 
-    // Inicializar Semaforo
-    retval = sem_init(sp, 1, 1);
+    int a = *(int *) pop(memoria);
+    printf("SHM_ID: %d", a);
 
-    if (retval != 0)
-    {
-        perror("No se pudo inicializar el semaforo.");
-        exit (3);
-    }
+    desbloquear_sem(sem);
 
-    retval = sem_trywait (sp);
-    printf("Se hizo  trywait. Retorno  %d  >\n",retval);
-    getchar ();
-
-    retval = sem_trywait (sp);
-    printf("Se hizo  trywait. Retorno  %d  >\n",retval);
-    getchar ();
-
-    retval = sem_trywait (sp);
-    printf("Se hizo  trywait. Retorno  %d  >\n",retval);
-    getchar ();
-
-
-    printf("Desasociando segmento");
-    if ((err = shmdt((void *) sp) == -1))
-        printf("...ERROR\n");
-    else
-        printf("...OK. Desasociado = %d\n", (int)err);
-
+    //cerrar_sem(sem);
 }

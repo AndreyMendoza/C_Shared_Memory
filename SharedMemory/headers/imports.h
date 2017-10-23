@@ -28,10 +28,13 @@
 #include <semaphore.h>
 #include <sys/stat.h>
 #include <sys/sem.h>
+#include <fcntl.h>
 
 
 // Variables globales
-#define SEGMENTSIZE sizeof(sem_t)
+#define SEGMENTSIZE 2048
 #define SEGMENTPERM 0666
+#define SEM_NAME    "/Prueba"
+
 
 #endif //SHAREDMEMORY_BIBLIOTECAS_H

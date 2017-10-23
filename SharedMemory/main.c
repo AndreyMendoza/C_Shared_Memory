@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
     }
 
     else if (strcmp(modo_programa, "prod") == 0)
-        producir(atoi(argv[1]));
+        producir();
 
     else if (strcmp(modo_programa, "espia") == 0)
         espiar();
