@@ -27,7 +27,7 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
         printf("El tipo de algoritmo ingresado es desconocido, existen:\n\t-s segmentación\n\t-p paginación\n");
     }
 
-    cerrar_sem(sem);
+    //cerrar_sem(sem);
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -58,18 +58,93 @@ void crear_hilos_segmentos()
     pthread_t thread;
 
     while(true){
-        if(pthread_create(&thread, 0, reservar_segmentos, NULL) < 0){
+        if(pthread_create(&thread, 0, reservar_segmentos, NULL) != 0){
             break;
         }
 
-        sleep((unsigned int)tiempo);
+        sleep((unsigned int) tiempo);
     }
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 void * reservar_segmentos(void * argv){
-    
+    //int n_segmentos = random_number(1,5);
+    int n_segmentos = 3;
+    int n_segmentos_aux = n_segmentos;
+
+    //int n_celdas_segmento = random_number(1,3);
+    int n_celdas_segmento = 2;
+    int n_celdas_segmento_aux = n_celdas_segmento;
+
+    sem_t * sem = (sem_t *) solicitar_sem(SEM_NAME);
+    pthread_t thread_id = pthread_self();
+    pthread_detach(thread_id);
+
+    void * shm_addr;
+    int shm_id = read_int("../data/shm_id.txt");
+    int tiempo = random_number(20,60);
+
+    //Variables para registrar en bitacora
+    char * time;
+    char buf[256];
+
+    //Pide el semaforo
+    bloquear_sem(sem);
+
+    shm_addr = asociar_mem(shm_id);
+
+    int * n_celdas = (int *) shm_addr;
+    int * n_celdas_disp = (int *) (shm_addr + sizeof(int));
+    Segmento * memoria = (Segmento *) (shm_addr + OFFSET);
+
+    //Arreglo de segmentos encontrados
+    int array_segmentos [5] = {};
+    int max_celdas = n_segmentos * n_celdas_segmento;
+
+    if (*n_celdas_disp >= max_celdas)
+    {
+        int n_seg_encontrados = 0;
+        for (int j = 0; (j < *n_celdas) && (n_seg_encontrados < n_segmentos);) {
+            int n_celdas_libres = 0;
+            for (int i = j; (n_celdas_libres < n_celdas_segmento) && (i < *n_celdas); ++i) {
+
+                if(memoria[i].estado == DISPONIBLE)
+                    n_celdas_libres++;
+                else
+                    break;
+            }
+
+            if(n_celdas_libres == n_celdas_segmento) {
+                array_segmentos[n_seg_encontrados] = j;
+                j = j + n_celdas_segmento;
+                n_seg_encontrados++;
+            }
+            else
+                j++;
+        }
+
+        if(n_seg_encontrados == n_segmentos){
+            for (int i = 0; i < n_segmentos; ++i) {
+                int index = array_segmentos[i];
+                for (int j = 0; j < n_celdas_segmento; ++j) {
+                    memoria[index + j].estado = OCUPADO;
+                    memoria[index + j].n_segmento = i+1;
+                    memoria[index + j].reg_base = index;
+                    memoria[index + j].tamanho = n_celdas_segmento;
+                    memoria[index + j].thread_id = thread_id;
+                }
+            }
+        }
+        else{
+            //No encontro espacio adecuado
+        }
+    }
+
+
+    ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
+
+    desbloquear_sem(sem);
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
