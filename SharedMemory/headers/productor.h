@@ -11,6 +11,7 @@ void prod_segmentos(int size, int shm_id);
 void crear_hilos_Paginas();
 void * reservar_paginas(void * n_paginas);
 void * ver_memoria_paginada(int n_paginas, void * memoria);
+void * ver_memoria_segmentada(int n_paginas, void * memoria_ref);
 
 
 #endif //SHAREDMEMORY_PRODUCTOR_H

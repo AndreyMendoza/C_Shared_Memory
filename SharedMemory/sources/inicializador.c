@@ -25,13 +25,6 @@ void inicializar(int size)
     n_celdas_disp = (int *) shm_addr + sizeof(int);
     *n_celdas_disp = 0;
     memoria = (Pagina *) (shm_addr + OFFSET);
-
-//   agregar_pagina(n_celdas, memoria, 1, 1000);
-//    agregar_pagina(n_celdas, memoria, 2, 2000);
-//
-//    printf("P.Logica: %d | P.Fisica:%d\n", memoria[0].pag_logica, memoria[0].pag_fisica);
-//    printf("P.Logica: %d | P.Fisica:%d\n", memoria[1].pag_logica, memoria[1].pag_fisica);
-
     save_int(size, "../data/size.txt");
 
     ver_memoria_paginada(*n_celdas, (void *) memoria);

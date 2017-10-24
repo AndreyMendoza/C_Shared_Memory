@@ -35,7 +35,7 @@
 
 
 // Variables globales
-#define SEGMENTSIZE 2048
+#define SEGMENTSIZE 20480
 #define SEGMENTPERM 0666
 #define SEM_NAME    "/Prueba"
 #define OCUPADO     0

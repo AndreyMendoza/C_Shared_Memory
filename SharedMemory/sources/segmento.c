@@ -1,11 +1,13 @@
 #include "../headers/segmento.h"
 
 
-void * new_segmento(int * n_segmento, int * reg_base, int * tamanho)
+void agregar_segmento(int * n_celdas, Segmento * memoria, int * n_celdas_disp)
 {
-    Segmento *n = malloc(sizeof(Segmento));
-    n->n_segmento = n_segmento;
-    n->reg_base = reg_base;
-    n->tamanho = tamanho;
-    return n;
+    memoria[*n_celdas].n_segmento = *n_celdas;
+    memoria[*n_celdas].reg_base = *n_celdas;
+    memoria[*n_celdas].tamanho = 1;
+    memoria[*n_celdas].estado = DISPONIBLE;
+    memoria[*n_celdas].thread_id = NULL;
+    (*n_celdas)++;
+    (*n_celdas_disp)++;
 }
