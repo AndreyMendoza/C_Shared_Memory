@@ -16,3 +16,81 @@ Thread 140673259702016. --> Asignando 1 páginas de memoria.  --> Mon Oct 23 17:
 	Asignación finalizada con éxito. --> Mon Oct 23 17:51:41 2017
 
 	Esperando 25 segundos para liberar memoria
+Thread 140386809861888. --> Asignando 7 páginas de memoria.  --> Mon Oct 23 18:08:45 2017
+
+	Página 0 asignada
+	Página 1 asignada
+	Página 2 asignada
+	Página 3 asignada
+	Página 4 asignada
+	Página 5 asignada
+	Página 6 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 18:08:45 2017
+	Esperando 52 segundos para liberar memoria
+
+Thread 140386801469184. --> Asignando 2 páginas de memoria.  --> Mon Oct 23 18:08:50 2017
+
+	Página 7 asignada
+	Página 8 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 18:08:50 2017
+	Esperando 22 segundos para liberar memoria
+
+Thread 140386793076480. --> Asignando 3 páginas de memoria.  --> Mon Oct 23 18:08:55 2017
+
+	Página 9 asignada
+	Página 10 asignada
+	Página 11 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 18:08:55 2017
+	Esperando 43 segundos para liberar memoria
+
+Thread 140587606013696. --> Asignando 1 páginas de memoria.  --> Mon Oct 23 18:09:10 2017
+
+	Página 0 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 18:09:10 2017
+	Esperando 50 segundos para liberar memoria
+
+Thread 140587597620992. --> Asignando 3 páginas de memoria.  --> Mon Oct 23 18:09:15 2017
+
+	Página 1 asignada
+	Página 2 asignada
+	Página 3 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 18:09:15 2017
+	Esperando 22 segundos para liberar memoria
+
+Thread 140587589228288. --> Asignando 9 páginas de memoria.  --> Mon Oct 23 18:09:20 2017
+
+	Página 4 asignada
+	Página 5 asignada
+	Página 6 asignada
+	Página 7 asignada
+	Página 8 asignada
+	Página 9 asignada
+	Página 10 asignada
+	Página 11 asignada
+	Página 12 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 18:09:20 2017
+	Esperando 58 segundos para liberar memoria
+
+Thread 140587597620992. --> Desasignando 3 páginas de memoria.  --> Mon Oct 23 18:09:37 2017
+
+	Página 1 desasignada
+	Página 2 desasignada
+	Página 3 desasignada
+	Desasignación finalizada con éxito. --> Mon Oct 23 18:09:37 2017
+
+Thread 140209558361856. --> Asignando 4 páginas de memoria.  --> Mon Oct 23 18:10:02 2017
+
+	Página 0 asignada
+	Página 1 asignada
+	Página 2 asignada
+	Página 3 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 18:10:02 2017
+	Esperando 45 segundos para liberar memoria
+
+Thread 140209475811072. --> Asignando 3 páginas de memoria.  --> Mon Oct 23 18:10:08 2017
+
+	Página 4 asignada
+	Página 5 asignada
+	Página 6 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 18:10:08 2017
+	Esperando 47 segundos para liberar memoria

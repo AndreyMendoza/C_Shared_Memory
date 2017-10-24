@@ -151,7 +151,8 @@ void prod_paginas(int size, int shm_id)
     int * n_celdas = (int *) shm_addr;
     int * n_celdas_disp = (int *) (shm_addr + sizeof(int));
     Pagina * memoria = (Pagina *) (shm_addr + OFFSET);
-
+    * n_celdas = 0;
+    * n_celdas_disp = 0;
     for (int i = 0; (i < size) && (*n_celdas < size); i++)
     {
         agregar_pagina(n_celdas, n_celdas_disp, memoria, *n_celdas);
