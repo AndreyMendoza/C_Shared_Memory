@@ -70,11 +70,11 @@ void crear_hilos_segmentos()
 
 void * reservar_segmentos(void * argv){
 
-    //int n_segmentos = 3;
+//    int n_segmentos = 3;
     int n_segmentos = random_number(1,5);
     int n_segmentos_aux = n_segmentos;
 
-    //int n_celdas_segmento = 2;
+//    int n_celdas_segmento = 3;
     int n_celdas_segmento = random_number(1,3);
     int n_celdas_segmento_aux = n_celdas_segmento;
 
@@ -130,12 +130,12 @@ void * reservar_segmentos(void * argv){
             sprintf(buf, "Thread %ld. --> Asignando %d segmentos de memoria.  --> %s", (long)thread_id, n_segmentos , time);
             registrar_accion("../data/bitacora_asignados.txt", buf);
 
-            *n_celdas_disp = *n_celdas_disp - n_segmentos;
+            *n_celdas_disp = *n_celdas_disp - max_celdas;
             for (int i = 0; i < n_segmentos; ++i) {
                 int index = array_segmentos[i];
                 for (int j = 0; j < n_celdas_segmento; ++j) {
                     memoria[index + j].estado = OCUPADO;
-                    memoria[index + j].n_segmento = i+1;
+                    memoria[index + j].n_segmento = i + 1;
                     memoria[index + j].reg_base = index;
                     memoria[index + j].tamanho = n_celdas_segmento;
                     memoria[index + j].thread_id = thread_id;
@@ -150,7 +150,7 @@ void * reservar_segmentos(void * argv){
             desbloquear_sem(sem);
 
             ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
-            sleep((unsigned int) tiempo);
+            sleep((unsigned int) 4);
 
             bloquear_sem(sem);
 
@@ -159,7 +159,7 @@ void * reservar_segmentos(void * argv){
             sprintf(buf, "Thread %ld. --> Desasignando %d segmentos de memoria.  --> %s", (long)thread_id, n_segmentos , time);
             registrar_accion("../data/bitacora_asignados.txt", buf);
 
-            for (int i = 0; (i < * n_celdas) && (n_segmentos_aux > 0); ++i)
+            for (int i = 0; (i < * n_celdas) && (max_celdas > 0); ++i)
             {
                 if ((memoria[i].estado == OCUPADO) && ((long) memoria[i].thread_id == (long) thread_id))
                 {
@@ -169,14 +169,14 @@ void * reservar_segmentos(void * argv){
                     memoria[i].reg_base = i;
                     memoria[i].tamanho = 1;
 
-                    n_segmentos_aux--;
+                    max_celdas--;
 
                     sprintf(buf, "\tSegmento %d desasignado",i);
                     registrar_accion("../data/bitacora_asignados.txt", buf);
                 }
             }
 
-            *n_celdas_disp = *n_celdas_disp + n_segmentos;
+            *n_celdas_disp = *n_celdas_disp + (n_segmentos * n_celdas_segmento);
 
             time = get_time();
             sprintf(buf, "\tDesasignación finalizada con éxito. --> %s", time);
@@ -362,9 +362,9 @@ void * ver_memoria_segmentada(int n_paginas, void * memoria_ref)
     Segmento * memoria = (Segmento *) memoria_ref;
     printf("Paginas disponibles: %d\n", *celdas_disp);
 
-    for (int i = 0; i < n_paginas;) {
+    for (int i = 0; i < n_paginas;i++) {
         printf("N-Segmento: %d | R.Base: %d | Tamanho: %d | Estado:%d | Proc.ID:%ld\n",
                memoria[i].n_segmento, memoria[i].reg_base, memoria[i].tamanho, memoria[i].estado, (long) memoria[i].thread_id);
-        i = i + memoria[i].tamanho;
+        //i = i + memoria[i].tamanho;
     }
 }

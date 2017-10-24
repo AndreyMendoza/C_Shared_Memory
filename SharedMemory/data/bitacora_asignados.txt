@@ -172,3 +172,443 @@ Thread 140565147285248. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23
 	Segmento 10 desasignado
 	Segmento 11 desasignado
 	Desasignación finalizada con éxito. --> Mon Oct 23 22:20:30 2017
+
+Thread 140278016927488. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:10:09 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:10:09 2017
+	Esperando 20 segundos para liberar memoria
+
+Thread 140278016927488. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23 23:10:29 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:10:29 2017
+
+Thread 140278016927488. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:11:03 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:11:03 2017
+	Esperando 29 segundos para liberar memoria
+
+Thread 140278016927488. --> Desasignando 1 segmentos de memoria.  --> Mon Oct 23 23:11:32 2017
+
+	Segmento 0 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:11:32 2017
+
+Thread 140278016927488. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:11:57 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:11:57 2017
+	Esperando 58 segundos para liberar memoria
+
+Thread 140278008534784. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:12:51 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:12:51 2017
+	Esperando 22 segundos para liberar memoria
+
+Thread 140278016927488. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23 23:12:55 2017
+
+	Segmento 1 desasignado
+	Segmento 3 desasignado
+	Segmento 4 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:12:55 2017
+
+Thread 140278008534784. --> Desasignando 1 segmentos de memoria.  --> Mon Oct 23 23:13:13 2017
+
+	Segmento 0 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:13:13 2017
+
+Thread 139892626216704. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:24:09 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:24:09 2017
+	Esperando 39 segundos para liberar memoria
+
+Thread 139892626216704. --> Desasignando 1 segmentos de memoria.  --> Mon Oct 23 23:24:48 2017
+
+	Segmento 0 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:24:48 2017
+
+Thread 139892626216704. --> Asignando 4 segmentos de memoria.  --> Mon Oct 23 23:25:00 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:25:00 2017
+	Esperando 27 segundos para liberar memoria
+
+Thread 139892626216704. --> Desasignando 4 segmentos de memoria.  --> Mon Oct 23 23:25:27 2017
+
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Segmento 3 desasignado
+	Segmento 4 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:25:27 2017
+
+Thread 139892626216704. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:25:51 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:25:51 2017
+	Esperando 43 segundos para liberar memoria
+
+Thread 139892626216704. --> Desasignando 1 segmentos de memoria.  --> Mon Oct 23 23:26:34 2017
+
+	Segmento 0 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:26:34 2017
+
+Thread 139892626216704. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:26:42 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:26:42 2017
+	Esperando 37 segundos para liberar memoria
+
+Thread 140357975906048. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:35:19 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:35:19 2017
+	Esperando 46 segundos para liberar memoria
+
+Thread 140510283335424. --> Asignando 5 segmentos de memoria.  --> Mon Oct 23 23:35:36 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Segmento 5 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:35:36 2017
+	Esperando 59 segundos para liberar memoria
+
+Thread 139932139972352. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:36:22 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:36:22 2017
+	Esperando 43 segundos para liberar memoria
+
+Thread 139812289873664. --> Asignando 2 segmentos de memoria.  --> Mon Oct 23 23:37:10 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:37:10 2017
+	Esperando 26 segundos para liberar memoria
+
+Thread 139686893332224. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:37:23 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:37:23 2017
+	Esperando 58 segundos para liberar memoria
+
+Thread 139686884939520. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:38:05 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:38:05 2017
+	Esperando 44 segundos para liberar memoria
+
+Thread 139686893332224. --> Desasignando 1 segmentos de memoria.  --> Mon Oct 23 23:38:21 2017
+
+	Segmento 0 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:38:21 2017
+
+Thread 139686893332224. --> Asignando 4 segmentos de memoria.  --> Mon Oct 23 23:38:47 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:38:47 2017
+	Esperando 53 segundos para liberar memoria
+
+Thread 139686884939520. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23 23:38:49 2017
+
+	Segmento 3 desasignado
+	Segmento 4 desasignado
+	Segmento 5 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:38:49 2017
+
+Thread 139686893332224. --> Desasignando 4 segmentos de memoria.  --> Mon Oct 23 23:39:40 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Segmento 9 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:39:40 2017
+
+Thread 139630982072064. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:45:20 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:45:20 2017
+	Esperando 55 segundos para liberar memoria
+
+Thread 139630982072064. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23 23:46:15 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:46:15 2017
+
+Thread 139630982072064. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:46:18 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:46:18 2017
+	Esperando 54 segundos para liberar memoria
+
+Thread 139630982072064. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23 23:47:12 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 3 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:47:12 2017
+
+Thread 139630982072064. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:47:16 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:47:16 2017
+	Esperando 23 segundos para liberar memoria
+
+Thread 139630982072064. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23 23:47:39 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:47:39 2017
+
+Thread 139630982072064. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:48:14 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:48:14 2017
+	Esperando 58 segundos para liberar memoria
+
+Thread 140737345693440. --> Asignando 4 segmentos de memoria.  --> Mon Oct 23 23:50:39 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:50:39 2017
+	Esperando 49 segundos para liberar memoria
+
+Thread 140737345693440. --> Asignando 2 segmentos de memoria.  --> Mon Oct 23 23:50:53 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:50:53 2017
+	Esperando 38 segundos para liberar memoria
+
+Thread 140737345693440. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:51:14 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:51:14 2017
+	Esperando 27 segundos para liberar memoria
+
+Thread 140737345693440. --> Asignando 5 segmentos de memoria.  --> Mon Oct 23 23:51:38 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Segmento 5 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:51:38 2017
+	Esperando 51 segundos para liberar memoria
+
+Thread 140737345693440. --> Desasignando 5 segmentos de memoria.  --> Mon Oct 23 23:51:42 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Segmento 3 desasignado
+	Segmento 4 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:54:11 2017
+
+Thread 140737337300736. --> Asignando 1 segmentos de memoria.  --> Mon Oct 23 23:54:32 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:54:32 2017
+	Esperando 39 segundos para liberar memoria
+
+Thread 140737328908032. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 23:54:33 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:54:33 2017
+	Esperando 25 segundos para liberar memoria
+
+Thread 140737320515328. --> Asignando 5 segmentos de memoria.  --> Mon Oct 23 23:54:33 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Segmento 5 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:54:33 2017
+	Esperando 41 segundos para liberar memoria
+
+Thread 140737337300736. --> Desasignando 1 segmentos de memoria.  --> Mon Oct 23 23:54:37 2017
+
+Thread 140737345693440. --> Asignando 5 segmentos de memoria.  --> Mon Oct 23 23:55:32 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Segmento 5 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 23:55:32 2017
+	Esperando 25 segundos para liberar memoria
+
+Thread 140737345693440. --> Desasignando 5 segmentos de memoria.  --> Mon Oct 23 23:55:36 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Segmento 3 desasignado
+	Segmento 4 desasignado
+	Segmento 5 desasignado
+	Segmento 6 desasignado
+	Segmento 7 desasignado
+	Segmento 8 desasignado
+	Segmento 9 desasignado
+	Segmento 10 desasignado
+	Segmento 11 desasignado
+	Segmento 12 desasignado
+	Segmento 13 desasignado
+	Segmento 14 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 23:59:55 2017
+
+Thread 140737337300736. --> Asignando 3 segmentos de memoria.  --> Tue Oct 24 00:01:03 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Tue Oct 24 00:01:03 2017
+	Esperando 58 segundos para liberar memoria
+
+Thread 140737328908032. --> Asignando 3 segmentos de memoria.  --> Tue Oct 24 00:01:03 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Tue Oct 24 00:01:03 2017
+	Esperando 40 segundos para liberar memoria
+
+Thread 140737337300736. --> Desasignando 3 segmentos de memoria.  --> Tue Oct 24 00:01:10 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+Thread 140737345693440. --> Asignando 3 segmentos de memoria.  --> Tue Oct 24 00:07:11 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Tue Oct 24 00:07:11 2017
+	Esperando 32 segundos para liberar memoria
+
+Thread 140737345693440. --> Desasignando 3 segmentos de memoria.  --> Tue Oct 24 00:07:15 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Segmento 3 desasignado
+	Segmento 4 desasignado
+	Segmento 5 desasignado
+	Segmento 6 desasignado
+	Segmento 7 desasignado
+	Segmento 8 desasignado
+	Desasignación finalizada con éxito. --> Tue Oct 24 00:07:52 2017
+
+Thread 140152427689728. --> Asignando 3 segmentos de memoria.  --> Tue Oct 24 00:10:15 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Tue Oct 24 00:10:15 2017
+	Esperando 22 segundos para liberar memoria
+
+Thread 140152427689728. --> Desasignando 3 segmentos de memoria.  --> Tue Oct 24 00:10:19 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Segmento 3 desasignado
+	Segmento 4 desasignado
+	Segmento 5 desasignado
+	Segmento 6 desasignado
+	Segmento 7 desasignado
+	Segmento 8 desasignado
+	Desasignación finalizada con éxito. --> Tue Oct 24 00:10:19 2017
+
+Thread 140152427689728. --> Asignando 3 segmentos de memoria.  --> Tue Oct 24 00:10:58 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Tue Oct 24 00:10:58 2017
+	Esperando 33 segundos para liberar memoria
+
+Thread 139908213233408. --> Asignando 2 segmentos de memoria.  --> Tue Oct 24 00:11:42 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Asignación finalizada con éxito. --> Tue Oct 24 00:11:42 2017
+	Esperando 37 segundos para liberar memoria
+
+Thread 139908213233408. --> Desasignando 2 segmentos de memoria.  --> Tue Oct 24 00:11:46 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Desasignación finalizada con éxito. --> Tue Oct 24 00:11:46 2017
+
+Thread 139908213233408. --> Asignando 3 segmentos de memoria.  --> Tue Oct 24 00:12:21 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Tue Oct 24 00:12:21 2017
+	Esperando 55 segundos para liberar memoria
+
+Thread 139908213233408. --> Desasignando 3 segmentos de memoria.  --> Tue Oct 24 00:12:25 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Segmento 3 desasignado
+	Segmento 4 desasignado
+	Segmento 5 desasignado
+	Segmento 6 desasignado
+	Segmento 7 desasignado
+	Segmento 8 desasignado
+	Desasignación finalizada con éxito. --> Tue Oct 24 00:12:25 2017
+
+Thread 139908213233408. --> Asignando 3 segmentos de memoria.  --> Tue Oct 24 00:13:00 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Tue Oct 24 00:13:00 2017
+	Esperando 38 segundos para liberar memoria
+
+Thread 139908213233408. --> Desasignando 3 segmentos de memoria.  --> Tue Oct 24 00:13:04 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Desasignación finalizada con éxito. --> Tue Oct 24 00:13:04 2017
