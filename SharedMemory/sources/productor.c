@@ -208,7 +208,7 @@ void prod_segmentos(int size, int shm_id)
         agregar_segmento(n_celdas, memoria, n_celdas_disp);
     }
 
-    //ver_memoria_paginada(*(int *)shm_addr, (void *) memoria);
+    ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
 
     desbloquear_sem(sem);
 }
@@ -234,11 +234,13 @@ void * ver_memoria_segmentada(int n_paginas, void * memoria_ref)
 {
     int shm_id = read_int("../data/shm_id.txt");
     void * shm_addr = asociar_mem(shm_id);
-    int * pag_disp = (int *) (shm_addr + sizeof(int));
-    Pagina * memoria = (Pagina *) memoria_ref;
-    printf("Paginas disponibles: %d\n", *pag_disp);
-    for (int i = 0; i < n_paginas; i++) {
-        printf("P.Logica: %d | Estado:%d | Proc.ID:%ld\n",
-               memoria[i].pag_logica, memoria[i].estado, (long) memoria[i].thread_id);
+    int * celdas_disp = (int *) (shm_addr + sizeof(int));
+    Segmento * memoria = (Segmento *) memoria_ref;
+    printf("Paginas disponibles: %d\n", *celdas_disp);
+
+    for (int i = 0; i < n_paginas;) {
+        printf("N-Segmento: %d | R.Base: %d | Tamanho: %d | Estado:%d | Proc.ID:%ld\n",
+               memoria[i].n_segmento, memoria[i].reg_base, memoria[i].tamanho, memoria[i].estado, (long) memoria[i].thread_id);
+        i = i + memoria[i].tamanho;
     }
 }

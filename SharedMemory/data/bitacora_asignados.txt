@@ -94,3 +94,18 @@ Thread 140209475811072. --> Asignando 3 páginas de memoria.  --> Mon Oct 23 18:
 	Página 6 asignada
 	Asignación finalizada con éxito. --> Mon Oct 23 18:10:08 2017
 	Esperando 47 segundos para liberar memoria
+
+Thread 140737345693440. --> Asignando 1 páginas de memoria.  --> Mon Oct 23 19:23:49 2017
+
+	Página 0 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 19:23:49 2017
+	Esperando 56 segundos para liberar memoria
+
+Thread 140737337300736. --> Asignando 4 páginas de memoria.  --> Mon Oct 23 19:23:52 2017
+
+	Página 1 asignada
+	Página 2 asignada
+	Página 3 asignada
+	Página 4 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 19:23:52 2017
+	Esperando 40 segundos para liberar memoria
