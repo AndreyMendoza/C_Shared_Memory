@@ -1,0 +1,18 @@
+
+Thread 140673259702016. --> Asignando 1 páginas de memoria.  --> Mon Oct 23 17:50:41 2017
+
+	Página 13 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 17:50:41 2017
+
+	Esperando 46 segundos para liberar memoria
+Thread 140673259702016. --> Desasignando 1 páginas de memoria.  --> Mon Oct 23 17:51:27 2017
+
+	Página 13 desasignada
+	Desasignación finalizada con éxito. --> Mon Oct 23 17:51:27 2017
+
+Thread 140673259702016. --> Asignando 1 páginas de memoria.  --> Mon Oct 23 17:51:41 2017
+
+	Página 13 asignada
+	Asignación finalizada con éxito. --> Mon Oct 23 17:51:41 2017
+
+	Esperando 25 segundos para liberar memoria

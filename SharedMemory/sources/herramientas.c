@@ -213,3 +213,13 @@ int read_int(char * file_name)
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+char* get_time(){
+    time_t rawtime;
+    struct tm * timeinfo;
+
+    time ( &rawtime );
+    timeinfo = localtime ( &rawtime );
+
+    return asctime(timeinfo);
+}

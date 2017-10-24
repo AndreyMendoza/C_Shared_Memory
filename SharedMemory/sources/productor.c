@@ -62,6 +62,10 @@ void * reservar_paginas(void * ref_n_paginas)
     int shm_id = read_int("../data/shm_id.txt");
     int tiempo = random_number(20,60);
 
+    //Variables para registrar en bitacora
+    char * time;
+    char buf[256];
+
     bloquear_sem(sem);
 
     shm_addr = asociar_mem(shm_id);
@@ -72,6 +76,10 @@ void * reservar_paginas(void * ref_n_paginas)
 
     if (*n_celdas_disp > n_paginas)
     {
+        time = get_time();
+        sprintf(buf, "Thread %ld. --> Asignando %d páginas de memoria.  --> %s", (long)thread_id, n_paginas , time);
+        registrar_accion("../data/bitacora_asignados.txt", buf);
+
         *n_celdas_disp = *n_celdas_disp - n_paginas;
         for (int i = 0; (i < * n_celdas) && (n_paginas > 0); ++i)
         {
@@ -80,19 +88,28 @@ void * reservar_paginas(void * ref_n_paginas)
                 memoria[i].estado = OCUPADO;
                 memoria[i].thread_id = thread_id;
                 n_paginas--;
+
+                sprintf(buf, "\tPágina %d asignada",i);
+                registrar_accion("../data/bitacora_asignados.txt", buf);
             }
         }
-        registrar_accion("../data/bitacora.txt", "El thread %d reservo memoria.");
+
+        time = get_time();
+        sprintf(buf, "\tAsignación finalizada con éxito. --> %s\tEsperando %d segundos para liberar memoria\n", time, tiempo);
+        registrar_accion("../data/bitacora_asignados.txt", buf);
 
         desbloquear_sem(sem);
 
         ver_memoria_paginada(*(int *)shm_addr, (void *) memoria);
         sleep((unsigned int) tiempo);
-        
 
         bloquear_sem(sem);
 
         // Eliminar memoria
+        time = get_time();
+        sprintf(buf, "Thread %ld. --> Desasignando %d páginas de memoria.  --> %s", (long)thread_id, n_paginas_aux , time);
+        registrar_accion("../data/bitacora_asignados.txt", buf);
+
         for (int i = 0; (i < * n_celdas) && (n_paginas < n_paginas_aux); ++i)
         {
             if ((memoria[i].estado == OCUPADO) && ((long) memoria[i].thread_id == (long) thread_id))
@@ -100,13 +117,23 @@ void * reservar_paginas(void * ref_n_paginas)
                 memoria[i].estado = DISPONIBLE;
                 memoria[i].thread_id = NULL;
                 n_paginas++;
+                sprintf(buf, "\tPágina %d desasignada",i);
+                registrar_accion("../data/bitacora_asignados.txt", buf);
             }
         }
         *n_celdas_disp = *n_celdas_disp + n_paginas;
+
+        time = get_time();
+        sprintf(buf, "\tDesasignación finalizada con éxito. --> %s", time);
+        registrar_accion("../data/bitacora_asignados.txt", buf);
     }
     else
     {
-        registrar_accion("../data/bitacora.txt", "El thread %d no encontro espacio suficiente.");
+        char * time = get_time();
+        char buf[256];
+        sprintf(buf, "El thread %ld no encontró espacios suficientes. Solicitaba %d páginas. Hora: %s", (long)thread_id, n_paginas_aux, time);
+        registrar_accion("../data/bitacora_fallidos.txt", buf);
+
     }
     ver_memoria_paginada(*(int *)shm_addr, (void *) memoria);
     desbloquear_sem(sem);
@@ -125,7 +152,7 @@ void prod_paginas(int size, int shm_id)
     int * n_celdas_disp = (int *) (shm_addr + sizeof(int));
     Pagina * memoria = (Pagina *) (shm_addr + OFFSET);
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; (i < size) && (*n_celdas < size); i++)
     {
         agregar_pagina(n_celdas, n_celdas_disp, memoria, *n_celdas);
     }

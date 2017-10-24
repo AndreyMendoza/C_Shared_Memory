@@ -9,6 +9,7 @@ int random_number(int min_num, int max_num);
 void registrar_accion(char * file_name, char * registro);
 void save_int(int num, char * file_name);
 int read_int(char * file_name);
+char * get_time();
 
 // Semaforos
 void * solicitar_sem(char * nombre_sem);
