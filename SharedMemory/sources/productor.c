@@ -13,13 +13,14 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
     if(strcmp(tipoAlgoritmo,"-s")==0)
     {
         prod_segmentos(size, shm_id);
+        crear_hilos_segmentos();
     }
 
     // Paginacion
     else if(strcmp(tipoAlgoritmo,"-p")==0)
     {
         prod_paginas(size, shm_id);
-        crear_hilos_Paginas();
+        crear_hilos_paginas();
     }
 
     else{
@@ -31,7 +32,7 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-void crear_hilos_Paginas()
+void crear_hilos_paginas()
 {
     int tiempo = random_number(3, 6);
     int n_paginas;
@@ -46,6 +47,29 @@ void crear_hilos_Paginas()
         if (n_paginas < -1) break;
 
     }
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+void crear_hilos_segmentos()
+{
+    int tiempo = random_number(20, 60);
+    pthread_t thread;
+
+    while(true){
+        if(pthread_create(&thread, 0, reservar_segmentos, NULL) < 0){
+            break;
+        }
+
+        sleep((unsigned int)tiempo);
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+void * reservar_segmentos(void * argv){
+    
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
