@@ -133,3 +133,42 @@ Thread 140589237266176. --> Asignando 6 páginas de memoria.  --> Mon Oct 23 20:
 	Página 13 asignada
 	Asignación finalizada con éxito. --> Mon Oct 23 20:06:49 2017
 	Esperando 23 segundos para liberar memoria
+
+Thread 140565155677952. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 22:19:03 2017
+
+	Segmento 1 asignado
+	Segmento 1 asignado
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 2 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 3 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 22:19:03 2017
+	Esperando 58 segundos para liberar memoria
+
+Thread 140565147285248. --> Asignando 3 segmentos de memoria.  --> Mon Oct 23 22:20:01 2017
+
+	Segmento 1 asignado
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Mon Oct 23 22:20:01 2017
+	Esperando 29 segundos para liberar memoria
+
+Thread 140565155677952. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23 22:20:01 2017
+
+	Segmento 0 desasignado
+	Segmento 1 desasignado
+	Segmento 2 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 22:20:01 2017
+
+Thread 140565147285248. --> Desasignando 3 segmentos de memoria.  --> Mon Oct 23 22:20:30 2017
+
+	Segmento 9 desasignado
+	Segmento 10 desasignado
+	Segmento 11 desasignado
+	Desasignación finalizada con éxito. --> Mon Oct 23 22:20:30 2017

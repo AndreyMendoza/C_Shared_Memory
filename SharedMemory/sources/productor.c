@@ -34,7 +34,7 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
 
 void crear_hilos_paginas()
 {
-    int tiempo = random_number(3, 6);
+    int tiempo = random_number(30, 60);
     int n_paginas;
     pthread_t thread;
 
@@ -54,7 +54,7 @@ void crear_hilos_paginas()
 
 void crear_hilos_segmentos()
 {
-    int tiempo = random_number(20, 60);
+    int tiempo = random_number(30, 60);
     pthread_t thread;
 
     while(true){
@@ -69,12 +69,13 @@ void crear_hilos_segmentos()
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 void * reservar_segmentos(void * argv){
-    //int n_segmentos = random_number(1,5);
-    int n_segmentos = 3;
+
+    //int n_segmentos = 3;
+    int n_segmentos = random_number(1,5);
     int n_segmentos_aux = n_segmentos;
 
-    //int n_celdas_segmento = random_number(1,3);
-    int n_celdas_segmento = 2;
+    //int n_celdas_segmento = 2;
+    int n_celdas_segmento = random_number(1,3);
     int n_celdas_segmento_aux = n_celdas_segmento;
 
     sem_t * sem = (sem_t *) solicitar_sem(SEM_NAME);
@@ -124,7 +125,12 @@ void * reservar_segmentos(void * argv){
                 j++;
         }
 
-        if(n_seg_encontrados == n_segmentos){
+        if(n_seg_encontrados == n_segmentos){//Encontro espacio adecuado
+            time = get_time();
+            sprintf(buf, "Thread %ld. --> Asignando %d segmentos de memoria.  --> %s", (long)thread_id, n_segmentos , time);
+            registrar_accion("../data/bitacora_asignados.txt", buf);
+
+            *n_celdas_disp = *n_celdas_disp - n_segmentos;
             for (int i = 0; i < n_segmentos; ++i) {
                 int index = array_segmentos[i];
                 for (int j = 0; j < n_celdas_segmento; ++j) {
@@ -134,13 +140,57 @@ void * reservar_segmentos(void * argv){
                     memoria[index + j].tamanho = n_celdas_segmento;
                     memoria[index + j].thread_id = thread_id;
                 }
+                sprintf(buf, "\tSegmento %d asignado",i+1);
+                registrar_accion("../data/bitacora_asignados.txt", buf);
             }
+            time = get_time();
+            sprintf(buf, "\tAsignación finalizada con éxito. --> %s\tEsperando %d segundos para liberar memoria\n", time, tiempo);
+            registrar_accion("../data/bitacora_asignados.txt", buf);
+
+            desbloquear_sem(sem);
+
+            ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
+            sleep((unsigned int) tiempo);
+
+            bloquear_sem(sem);
+
+            // Eliminar memoria de segmentos
+            time = get_time();
+            sprintf(buf, "Thread %ld. --> Desasignando %d segmentos de memoria.  --> %s", (long)thread_id, n_segmentos , time);
+            registrar_accion("../data/bitacora_asignados.txt", buf);
+
+            for (int i = 0; (i < * n_celdas) && (n_segmentos_aux > 0); ++i)
+            {
+                if ((memoria[i].estado == OCUPADO) && ((long) memoria[i].thread_id == (long) thread_id))
+                {
+                    memoria[i].estado = DISPONIBLE;
+                    memoria[i].thread_id = NULL;
+                    memoria[i].n_segmento = i;
+                    memoria[i].reg_base = i;
+                    memoria[i].tamanho = 1;
+
+                    n_segmentos_aux--;
+
+                    sprintf(buf, "\tSegmento %d desasignado",i);
+                    registrar_accion("../data/bitacora_asignados.txt", buf);
+                }
+            }
+
+            *n_celdas_disp = *n_celdas_disp + n_segmentos;
+
+            time = get_time();
+            sprintf(buf, "\tDesasignación finalizada con éxito. --> %s", time);
+            registrar_accion("../data/bitacora_asignados.txt", buf);
+
+
         }
-        else{
-            //No encontro espacio adecuado
+        else{//No encontro espacio adecuado
+            time = get_time();
+            sprintf(buf, "El thread %ld no encontró espacios suficientes. \n\tSolicitaba %d segmentos. \n\tHora: %s", (long)thread_id, n_segmentos, time);
+            registrar_accion("../data/bitacora_fallidos.txt", buf);
+
         }
     }
-
 
     ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
 
@@ -227,8 +277,7 @@ void * reservar_paginas(void * ref_n_paginas)
     }
     else
     {
-        char * time = get_time();
-        char buf[256];
+        time = get_time();
         sprintf(buf, "El thread %ld no encontró espacios suficientes. Solicitaba %d páginas. Hora: %s", (long)thread_id, n_paginas_aux, time);
         registrar_accion("../data/bitacora_fallidos.txt", buf);
 
