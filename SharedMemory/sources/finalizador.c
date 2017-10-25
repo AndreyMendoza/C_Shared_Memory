@@ -2,14 +2,22 @@
 
 void finalizar()
 {
-    sem_t * sem_shm = (sem_t *) solicitar_sem(SEM_NAME);
-    sem_t * sem_proc = (sem_t *) solicitar_sem(SEM_NAME_PROC);
+    int shm_id = read_int("../data/shm_id.txt");
+    int shm_id_proc = read_int("../data/shm_id_proc.txt");
 
     system("killall prod");
-    printf("Procesos eliminados\n");
+    printf("\nProcesos eliminados\n");
+
+    if (shmctl(shm_id, IPC_RMID, 0) != -1)
+        printf("\nMemoria compartida liberada\n");
+
+    if (shmctl(shm_id_proc, IPC_RMID, 0) != -1)
+        printf("\nMemoria compartida de procesos liberada\n");
 
 
-//    cerrar_sem(sem_shm);
-//    cerrar_sem(sem_proc);
+    if (sem_unlink(SEM_NAME) == 0)
+        printf("\nSemaforo de memoria compartido eliminado\n");
 
+    if (sem_unlink(SEM_NAME_PROC) == 0)
+        printf("\nSemaforo de memoria de procesos eliminado\n");
 }

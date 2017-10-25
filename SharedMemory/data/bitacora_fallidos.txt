@@ -666,3 +666,19 @@ El thread 140673905202944 no encontró espacios suficientes.
 El thread 140673905202944 no encontró espacios suficientes. 
 	Solicitaba 5 segmentos. 
 	Hora: Wed Oct 25 01:55:43 2017
+
+El thread 140711464007424 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 02:23:53 2017
+
+El thread 140711383004928 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 02:24:03 2017
+
+El thread 140711383004928 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 02:24:08 2017
+
+El thread 139927264220928 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 02:24:24 2017

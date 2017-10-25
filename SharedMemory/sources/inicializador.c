@@ -33,11 +33,7 @@ void inicializar(int size)
 
     ver_memoria_paginada(*n_celdas, (void *) memoria);
 
-    shmdt(shm_addr);
-//    shmctl(shm_id, IPC_RMID, 0);
     desbloquear_sem(sem);
-    // cerrar_sem(sem);
-
 }
 
 

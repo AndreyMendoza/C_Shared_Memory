@@ -2090,3 +2090,85 @@ Thread 140488035141376. --> Asignando 2 segmentos de memoria.  --> Wed Oct 25 02
 	Segmento 2 asignado
 	Asignación finalizada con éxito. --> Wed Oct 25 02:08:43 2017
 	Esperando 23 segundos para liberar memoria
+
+Thread 140146356311808. --> Asignando 2 segmentos de memoria.  --> Wed Oct 25 02:23:17 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Asignación finalizada con éxito. --> Wed Oct 25 02:23:17 2017
+	Esperando 49 segundos para liberar memoria
+
+Thread 140146347919104. --> Asignando 1 segmentos de memoria.  --> Wed Oct 25 02:23:22 2017
+
+	Segmento 1 asignado
+	Asignación finalizada con éxito. --> Wed Oct 25 02:23:22 2017
+	Esperando 20 segundos para liberar memoria
+
+Thread 140711472400128. --> Asignando 4 segmentos de memoria.  --> Wed Oct 25 02:23:48 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Asignación finalizada con éxito. --> Wed Oct 25 02:23:48 2017
+	Esperando 35 segundos para liberar memoria
+
+Thread 140711464007424. --> Asignando 2 segmentos de memoria.  --> Wed Oct 25 02:23:58 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Asignación finalizada con éxito. --> Wed Oct 25 02:23:58 2017
+	Esperando 44 segundos para liberar memoria
+
+Thread 139927272613632. --> Asignando 3 segmentos de memoria.  --> Wed Oct 25 02:24:19 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Asignación finalizada con éxito. --> Wed Oct 25 02:24:19 2017
+	Esperando 40 segundos para liberar memoria
+
+Thread 139927264220928. --> Asignando 4 segmentos de memoria.  --> Wed Oct 25 02:24:29 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Asignación finalizada con éxito. --> Wed Oct 25 02:24:29 2017
+	Esperando 35 segundos para liberar memoria
+
+Thread 139927255828224. --> Asignando 4 segmentos de memoria.  --> Wed Oct 25 02:24:34 2017
+
+	Segmento 1 asignado
+	Segmento 2 asignado
+	Segmento 3 asignado
+	Segmento 4 asignado
+	Asignación finalizada con éxito. --> Wed Oct 25 02:24:34 2017
+	Esperando 41 segundos para liberar memoria
+
+Thread 140198568249088. --> Asignando 1 páginas de memoria.  --> Wed Oct 25 02:28:29 2017
+
+	Página 0 asignada
+	Asignación finalizada con éxito. --> Wed Oct 25 02:28:29 2017
+	Esperando 44 segundos para liberar memoria
+
+Thread 140494317078272. --> Asignando 6 páginas de memoria.  --> Wed Oct 25 02:36:06 2017
+
+	Página 0 asignada
+	Página 1 asignada
+	Página 2 asignada
+	Página 3 asignada
+	Página 4 asignada
+	Página 5 asignada
+	Asignación finalizada con éxito. --> Wed Oct 25 02:36:06 2017
+	Esperando 60 segundos para liberar memoria
+
+Thread 140551357818624. --> Asignando 5 páginas de memoria.  --> Wed Oct 25 02:37:51 2017
+
+	Página 0 asignada
+	Página 1 asignada
+	Página 2 asignada
+	Página 3 asignada
+	Página 4 asignada
+	Asignación finalizada con éxito. --> Wed Oct 25 02:37:51 2017
+	Esperando 58 segundos para liberar memoria

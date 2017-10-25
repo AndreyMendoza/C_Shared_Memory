@@ -111,6 +111,7 @@ void cerrar_sem(void * sem_ref)
         printf("ERROR\n");
         exit(2);
     }
+
     printf("clausurado...");
 
     result = sem_unlink (SEM_NAME);
