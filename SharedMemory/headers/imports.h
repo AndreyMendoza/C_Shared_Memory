@@ -35,12 +35,14 @@
 
 
 // Variables globales
-#define SEGMENTSIZE 20480
-#define SEGMENTPERM 0666
-#define SEM_NAME    "/Prueba"
-#define OCUPADO     0
-#define DISPONIBLE  1
-#define OFFSET      (sizeof(int) * 2)
+#define SEGMENTSIZE     20480
+#define SEGMENTPERM     0666
+#define SEM_NAME        "/Prueba"
+#define OCUPADO         0
+#define DISPONIBLE      1
+#define OFFSET          (sizeof(int) * 3)
+#define PAGINACION      0
+#define SEGMENTACION    1
 
 
 #endif //SHAREDMEMORY_BIBLIOTECAS_H

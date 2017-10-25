@@ -297,9 +297,11 @@ void prod_paginas(int size, int shm_id)
 
     int * n_celdas = (int *) shm_addr;
     int * n_celdas_disp = (int *) (shm_addr + sizeof(int));
+    int * tipo = (int *) (shm_addr + (sizeof(int) * 2));
     Pagina * memoria = (Pagina *) (shm_addr + OFFSET);
     * n_celdas = 0;
     * n_celdas_disp = 0;
+    * tipo = PAGINACION;
     for (int i = 0; (i < size) && (*n_celdas < size); i++)
     {
         agregar_pagina(n_celdas, n_celdas_disp, memoria, *n_celdas);
@@ -314,18 +316,19 @@ void prod_paginas(int size, int shm_id)
 
 void prod_segmentos(int size, int shm_id)
 {
-    int n__segmentos = random_number(1,5);
-    int n_pag_segmento = random_number(1,3);
     sem_t * sem = (sem_t *) solicitar_sem(SEM_NAME);
     void * shm_addr = asociar_mem(shm_id);
 
     bloquear_sem(sem);
 
     int * n_celdas = (int *) shm_addr;
+    int * tipo = (int *) (shm_addr + (sizeof(int) * 2));
     int * n_celdas_disp = (int *) (shm_addr + sizeof(int));
     Segmento * memoria = (Segmento *) (shm_addr + OFFSET);
     * n_celdas = 0;
     * n_celdas_disp = 0;
+    * tipo = SEGMENTACION;
+
 
     for (int i = 0; (i < size) && (*n_celdas < size); i++)
     {
@@ -344,8 +347,9 @@ void * ver_memoria_paginada(int n_paginas, void * memoria_ref)
     int shm_id = read_int("../data/shm_id.txt");
     void * shm_addr = asociar_mem(shm_id);
     int * pag_disp = (int *) (shm_addr + sizeof(int));
+
     Pagina * memoria = (Pagina *) memoria_ref;
-    printf("Paginas disponibles: %d\n", *pag_disp);
+    printf("\nPaginas disponibles: %d\n", *pag_disp);
     for (int i = 0; i < n_paginas; i++) {
         printf("P.Logica: %d | Estado:%d | Proc.ID:%ld\n",
                memoria[i].pag_logica, memoria[i].estado, (long) memoria[i].thread_id);
@@ -360,7 +364,7 @@ void * ver_memoria_segmentada(int n_paginas, void * memoria_ref)
     void * shm_addr = asociar_mem(shm_id);
     int * celdas_disp = (int *) (shm_addr + sizeof(int));
     Segmento * memoria = (Segmento *) memoria_ref;
-    printf("Paginas disponibles: %d\n", *celdas_disp);
+    printf("\nPaginas disponibles: %d\n", *celdas_disp);
 
     for (int i = 0; i < n_paginas;i++) {
         printf("N-Segmento: %d | R.Base: %d | Tamanho: %d | Estado:%d | Proc.ID:%ld\n",

@@ -3,8 +3,7 @@
 
 #include "imports.h"
 
-void espiar();
-void espiarMem();
-void espiarProc();
+void espiar_mem();
+void espiar_proc();
 
 #endif //SHAREDMEMORY_ESPIA_H

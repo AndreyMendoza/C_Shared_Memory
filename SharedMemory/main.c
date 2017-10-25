@@ -42,14 +42,13 @@ int main(int argc, char **argv) {
     else if (strcmp(modo_programa, "espia") == 0){
         // Estado de la memoria -> mem
         // Estado de los procesos -> proc
-        if(argc>2){
+        if(argc > 1){
             char * solicitud = argv[1];
-
-            if(strcmp(solicitud,"mem")==0){
-                espiarMem();
+            if(strcmp(solicitud, "mem") == 0){
+                espiar_mem();
             }
-            else if(strcmp(solicitud,"proc")==0){
-                espiarProc();
+            else if(strcmp(solicitud, "proc") == 0){
+                espiar_proc();
             }
             else{
                 printf("Solicitud %s desconocida.",solicitud);
@@ -57,7 +56,7 @@ int main(int argc, char **argv) {
             }
         }
         else{
-            printf("Parámetros incompletos, falta el modo de espiar(men|proc)\n");
+            printf("Parámetros incompletos, falta el modo de espiar(mem|proc)\n");
         }
     }
 
