@@ -53,7 +53,7 @@ void * solicitar_sem(char * nombre_sem)
         printf("creado...");
     else if (errno == EEXIST)
     {
-        sem = sem_open (SEM_NAME, 0);
+        sem = sem_open (nombre_sem, 0);
         printf("abierto...");
     }
     printf("OK\n");

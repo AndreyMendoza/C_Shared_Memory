@@ -12,7 +12,11 @@ void inicializar(int size)
     // Inicializar el semaforo
     sem = (sem_t *) solicitar_sem(SEM_NAME);
 
-    // Crear espacio de memoria compartida
+
+    //Crear espacio memoria de procesos
+    inic_proc_mem();
+
+    //Crear espacio memoria principal
     shm_id = solicitar_mem();
     save_int(shm_id, "../data/shm_id.txt");
     shm_addr = asociar_mem(shm_id);
@@ -35,3 +39,17 @@ void inicializar(int size)
 }
 
 
+void inic_proc_mem(){
+    int shm_id;
+    void * shm_addr;
+
+    // Crear espacio de memoria de procesos
+    shm_id = solicitar_mem();
+    save_int(shm_id, "../data/shm_id_proc.txt");
+    shm_addr = asociar_mem(shm_id);
+
+    for (int i = 0; i < 2001; ++i) {
+        long * array_bloquedos = (long * ) (shm_addr+ (sizeof(long) * i));
+        * array_bloquedos = 0;
+    }
+}

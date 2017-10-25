@@ -7,7 +7,6 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
 {
     int size = read_int("../data/size.txt");
     int shm_id = read_int("../data/shm_id.txt");
-    sem_t * sem = (sem_t *) solicitar_sem(SEM_NAME);
 
     // Segmentacion
     if(strcmp(tipoAlgoritmo,"-s")==0)
@@ -68,6 +67,64 @@ void crear_hilos_segmentos()
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
+void registrar_proc(long estado, long thread_id)
+{
+    int shm_id = read_int("../data/shm_id_proc.txt");
+    void * shm_addr = asociar_mem(shm_id);
+    sem_t * sem = (sem_t *) solicitar_sem(SEM_NAME_PROC);
+
+    bloquear_sem(sem);
+
+    long * array = (long * ) (shm_addr + estado);
+
+    if(estado == ACTIVO)
+        array[0] = thread_id;
+
+    else{
+        for (int i = 0; i < 500 ; ++i) {
+            if(array[i] == 0 || array[i] == STOP){
+                array[i] = thread_id;
+                break;
+            }
+        }
+    }
+
+    desbloquear_sem(sem);
+
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+void liberar_proc(long estado, long thread_id)
+{
+    int shm_id = read_int("../data/shm_id_proc.txt");
+    void * shm_addr = asociar_mem(shm_id);
+    sem_t * sem = (sem_t *) solicitar_sem(SEM_NAME_PROC);
+
+    bloquear_sem(sem);
+
+    long * array = (long * ) (shm_addr + estado);
+
+    if(estado == ACTIVO)
+        array[0] = STOP;
+
+    else{
+        for (int i = 0; i < 500 ; ++i) {
+            if(array[i] == thread_id){
+                array[i] = STOP;
+                break;
+            }
+        }
+    }
+
+    desbloquear_sem(sem);
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
 void * reservar_segmentos(void * argv){
 
 //    int n_segmentos = 3;
@@ -90,8 +147,17 @@ void * reservar_segmentos(void * argv){
     char * time;
     char buf[256];
 
+    //Registrarse como proceso bloqueado
+    registrar_proc(BLOQUEADO, (long) thread_id);
+
     //Pide el semaforo
     bloquear_sem(sem);
+
+    //Registrarse como proceso desbloqueado
+    liberar_proc(BLOQUEADO,(long) thread_id);
+
+    registrar_proc(ACTIVO, (long) thread_id);
+
 
     shm_addr = asociar_mem(shm_id);
 
@@ -148,11 +214,21 @@ void * reservar_segmentos(void * argv){
             registrar_accion("../data/bitacora_asignados.txt", buf);
 
             desbloquear_sem(sem);
+            liberar_proc(ACTIVO, (long) thread_id);
 
+            registrar_proc(ESPERA, (long) thread_id);
             ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
             sleep((unsigned int) 4);
+            liberar_proc(ESPERA, (long) thread_id);
+
+
+            registrar_proc(BLOQUEADO, (long) thread_id);
 
             bloquear_sem(sem);
+
+            liberar_proc(BLOQUEADO, (long) thread_id);
+
+            registrar_proc(ACTIVO, (long) thread_id);
 
             // Eliminar memoria de segmentos
             time = get_time();
@@ -189,12 +265,16 @@ void * reservar_segmentos(void * argv){
             sprintf(buf, "El thread %ld no encontró espacios suficientes. \n\tSolicitaba %d segmentos. \n\tHora: %s", (long)thread_id, n_segmentos, time);
             registrar_accion("../data/bitacora_fallidos.txt", buf);
 
+            registrar_proc(MUERTO, (long) thread_id);
         }
     }
 
     ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
 
     desbloquear_sem(sem);
+    liberar_proc(ACTIVO, (long) thread_id);
+    registrar_proc(FINALIZADO, (long) thread_id);
+
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -214,7 +294,13 @@ void * reservar_paginas(void * ref_n_paginas)
     char * time;
     char buf[256];
 
+    registrar_proc(BLOQUEADO, (long) thread_id);
+
     bloquear_sem(sem);
+
+    liberar_proc(BLOQUEADO, (long) thread_id);
+
+    registrar_proc(ACTIVO, (long) thread_id);
 
     shm_addr = asociar_mem(shm_id);
 
@@ -247,11 +333,20 @@ void * reservar_paginas(void * ref_n_paginas)
         registrar_accion("../data/bitacora_asignados.txt", buf);
 
         desbloquear_sem(sem);
+        liberar_proc(ACTIVO, (long) thread_id);
 
+        registrar_proc(ESPERA, (long) thread_id);
         ver_memoria_paginada(*(int *)shm_addr, (void *) memoria);
         sleep((unsigned int) tiempo);
+        liberar_proc(ESPERA, (long) thread_id);
+
+
+        registrar_proc(BLOQUEADO, (long) thread_id);
 
         bloquear_sem(sem);
+
+        liberar_proc(BLOQUEADO, (long) thread_id);
+        registrar_proc(ACTIVO, (long) thread_id);
 
         // Eliminar memoria
         time = get_time();
@@ -281,9 +376,13 @@ void * reservar_paginas(void * ref_n_paginas)
         sprintf(buf, "El thread %ld no encontró espacios suficientes. Solicitaba %d páginas. Hora: %s", (long)thread_id, n_paginas_aux, time);
         registrar_accion("../data/bitacora_fallidos.txt", buf);
 
+        registrar_proc(MUERTO, (long) thread_id);
     }
     ver_memoria_paginada(*(int *)shm_addr, (void *) memoria);
     desbloquear_sem(sem);
+    liberar_proc(ACTIVO, (long) thread_id);
+
+    registrar_proc(FINALIZADO, (long) thread_id);
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -317,6 +416,7 @@ void prod_paginas(int size, int shm_id)
 void prod_segmentos(int size, int shm_id)
 {
     sem_t * sem = (sem_t *) solicitar_sem(SEM_NAME);
+
     void * shm_addr = asociar_mem(shm_id);
 
     bloquear_sem(sem);

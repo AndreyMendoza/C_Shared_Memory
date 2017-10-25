@@ -37,12 +37,21 @@
 // Variables globales
 #define SEGMENTSIZE     20480
 #define SEGMENTPERM     0666
-#define SEM_NAME        "/Prueba"
+#define SEM_NAME        "/Shared_memory"
+#define SEM_NAME_PROC   "/Proc_status"
 #define OCUPADO         0
 #define DISPONIBLE      1
 #define OFFSET          (sizeof(int) * 3)
 #define PAGINACION      0
 #define SEGMENTACION    1
+#define LONG_SBLOCK     (sizeof(long) * 500)
+#define STOP            (-99)
+
+#define ACTIVO          0
+#define BLOQUEADO       (sizeof(long))
+#define MUERTO          BLOQUEADO + LONG_SBLOCK
+#define FINALIZADO      MUERTO + LONG_SBLOCK
+#define ESPERA          FINALIZADO + LONG_SBLOCK
 
 
 #endif //SHAREDMEMORY_BIBLIOTECAS_H

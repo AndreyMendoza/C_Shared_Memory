@@ -5,5 +5,6 @@
 
 
 void inicializar(int size);
+void inic_proc_mem();
 
 #endif //SHAREDMEMORY_INICIALIZADOR_H
