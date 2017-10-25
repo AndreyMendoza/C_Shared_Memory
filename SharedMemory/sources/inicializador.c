@@ -33,6 +33,8 @@ void inicializar(int size)
 
     ver_memoria_paginada(*n_celdas, (void *) memoria);
 
+    shmdt(shm_addr);
+//    shmctl(shm_id, IPC_RMID, 0);
     desbloquear_sem(sem);
     // cerrar_sem(sem);
 
@@ -49,7 +51,7 @@ void inic_proc_mem(){
     shm_addr = asociar_mem(shm_id);
 
     for (int i = 0; i < 2001; ++i) {
-        long * array_bloquedos = (long * ) (shm_addr+ (sizeof(long) * i));
-        * array_bloquedos = 0;
+        long *array_bloquedos = (long *) (shm_addr + (sizeof(long) * i));
+        *array_bloquedos = 0;
     }
 }

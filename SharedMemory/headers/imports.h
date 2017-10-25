@@ -8,6 +8,7 @@
 #include <libgen.h>
 #include <string.h>
 #include <errno.h>
+#include <signal.h>
 
 // Otros headers
 #include "inicializador.h"

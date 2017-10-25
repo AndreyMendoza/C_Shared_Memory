@@ -1,54 +1,668 @@
 
-El thread 140673259702016 no encontró espacios suficientes. Solicitaba 4 páginas. Hora: Mon Oct 23 17:50:29 2017
+El thread 139722620786432 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:28:33 2017
 
-El thread 140673259702016 no encontró espacios suficientes. Solicitaba 9 páginas. Hora: Mon Oct 23 17:50:33 2017
+El thread 139722620786432 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 00:29:11 2017
 
-El thread 140673259702016 no encontró espacios suficientes. Solicitaba 6 páginas. Hora: Mon Oct 23 17:50:37 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 8 páginas. Hora: Mon Oct 23 17:50:45 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 10 páginas. Hora: Mon Oct 23 17:50:49 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 5 páginas. Hora: Mon Oct 23 17:50:53 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 8 páginas. Hora: Mon Oct 23 17:50:57 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 2 páginas. Hora: Mon Oct 23 17:51:01 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 2 páginas. Hora: Mon Oct 23 17:51:05 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 8 páginas. Hora: Mon Oct 23 17:51:09 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 1 páginas. Hora: Mon Oct 23 17:51:13 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 6 páginas. Hora: Mon Oct 23 17:51:17 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 2 páginas. Hora: Mon Oct 23 17:51:21 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 10 páginas. Hora: Mon Oct 23 17:51:25 2017
-
-El thread 140673259702016 no encontró espacios suficientes. Solicitaba 4 páginas. Hora: Mon Oct 23 17:51:29 2017
-
-El thread 140673259702016 no encontró espacios suficientes. Solicitaba 10 páginas. Hora: Mon Oct 23 17:51:33 2017
-
-El thread 140673259702016 no encontró espacios suficientes. Solicitaba 10 páginas. Hora: Mon Oct 23 17:51:37 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 1 páginas. Hora: Mon Oct 23 17:51:45 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 6 páginas. Hora: Mon Oct 23 17:51:49 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 10 páginas. Hora: Mon Oct 23 17:51:53 2017
-
-El thread 140673251309312 no encontró espacios suficientes. Solicitaba 9 páginas. Hora: Mon Oct 23 17:51:57 2017
-
-El thread 140587580835584 no encontró espacios suficientes. Solicitaba 6 páginas. Hora: Mon Oct 23 18:09:25 2017
-
-El thread 140587580835584 no encontró espacios suficientes. Solicitaba 2 páginas. Hora: Mon Oct 23 18:09:30 2017
-
-El thread 140587580835584 no encontró espacios suficientes. Solicitaba 8 páginas. Hora: Mon Oct 23 18:09:35 2017
-
-El thread 140589228873472 no encontró espacios suficientes. Solicitaba 7 páginas. Hora: Mon Oct 23 20:06:55 2017
-
-El thread 140278008534784 no encontró espacios suficientes. 
+El thread 139722620786432 no encontró espacios suficientes. 
 	Solicitaba 5 segmentos. 
-	Hora: Mon Oct 23 23:13:45 2017
+	Hora: Wed Oct 25 00:29:49 2017
+
+El thread 139722620786432 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:30:27 2017
+
+El thread 139722620786432 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 00:31:05 2017
+
+El thread 139722620786432 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 00:31:43 2017
+
+El thread 140516071032576 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:41:21 2017
+
+El thread 140670910629632 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:53:06 2017
+
+El thread 140718284445440 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140718267660032 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140718259267328 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140718250874624 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140718242481920 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717758347008 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717749954304 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717741561600 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717733168896 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717724776192 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717716383488 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717707990784 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717145974528 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717137581824 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717129189120 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717120796416 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140717112403712 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140716617496320 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140716609103616 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140716600710912 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140716592318208 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140716583925504 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140716575532800 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140716567140096 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 00:57:31 2017
+
+El thread 140716575532800 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 00:57:36 2017
+
+El thread 140718292838144 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:57:41 2017
+
+El thread 140717104011008 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:57:51 2017
+
+El thread 140717154367232 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 00:58:36 2017
+
+El thread 140717154367232 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:58:41 2017
+
+El thread 140717104011008 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:58:56 2017
+
+El thread 140717154367232 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 00:59:06 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:22:55 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:23:00 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:23:05 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:23:10 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:23:25 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:23:45 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:23:50 2017
+
+El thread 140430381958912 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:23:55 2017
+
+El thread 140430381958912 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:24:00 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:24:20 2017
+
+El thread 140430356780800 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:24:35 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:24:40 2017
+
+El thread 140430356780800 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:24:55 2017
+
+El thread 140430356780800 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:25:05 2017
+
+El thread 140430356780800 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:25:15 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:25:25 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:25:35 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:25:40 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:25:50 2017
+
+El thread 140430381958912 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:26:00 2017
+
+El thread 140430381958912 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:26:05 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:26:10 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:26:20 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:26:25 2017
+
+El thread 140429988861696 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:26:50 2017
+
+El thread 140429972076288 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:27:10 2017
+
+El thread 140430365173504 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:27:15 2017
+
+El thread 140430381958912 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:27:25 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:27:35 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:27:40 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:27:45 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:27:55 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:28:00 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:28:05 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:28:10 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:28:25 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:28:30 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:28:35 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:28:40 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:28:45 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:28:55 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:29:00 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:29:10 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:29:20 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:29:25 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:29:35 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:29:40 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:29:50 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:29:55 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:30:00 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:30:05 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:30:10 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:30:15 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:30:20 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:30:25 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:30:45 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:30:50 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:31:00 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:31:10 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:31:15 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:31:20 2017
+
+El thread 140429988861696 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:31:30 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:31:45 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:31:50 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:31:55 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:32:05 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:32:10 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:32:15 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:32:20 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:32:35 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:32:45 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:32:50 2017
+
+El thread 140430339892992 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:32:55 2017
+
+El thread 140429988861696 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:33:00 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:33:15 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:33:25 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:33:35 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:33:40 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:33:45 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:33:50 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:34:00 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:34:05 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:34:15 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:34:20 2017
+
+El thread 140429980468992 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:34:25 2017
+
+El thread 140430348388096 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:34:40 2017
+
+El thread 140430373566208 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:34:50 2017
+
+El thread 139659433051904 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:35:06 2017
+
+El thread 139659407873792 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:35:26 2017
+
+El thread 139659407873792 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:35:31 2017
+
+El thread 139659441444608 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:35:36 2017
+
+El thread 139659441444608 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:35:46 2017
+
+El thread 140458297820928 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:43:01 2017
+
+El thread 139939757291264 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:44:04 2017
+
+El thread 139939757291264 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:44:09 2017
+
+El thread 139939748898560 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:44:19 2017
+
+El thread 139939748898560 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:44:24 2017
+
+El thread 139939748898560 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:44:29 2017
+
+El thread 139939748898560 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:44:34 2017
+
+El thread 139939740505856 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:44:44 2017
+
+El thread 139939732113152 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:44:59 2017
+
+El thread 139939748898560 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:45:09 2017
+
+El thread 139939748898560 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:45:19 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:47:37 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:47:42 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:47:47 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:47:52 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:47:57 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:48:02 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:48:07 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:48:12 2017
+
+El thread 140287020087040 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:48:42 2017
+
+El thread 140287020087040 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:48:47 2017
+
+El thread 140287045265152 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:48:52 2017
+
+El thread 140287045265152 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:48:57 2017
+
+El thread 140287045265152 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:49:02 2017
+
+El thread 140287020087040 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:49:32 2017
+
+El thread 140287020087040 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:49:37 2017
+
+El thread 140287020087040 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:49:42 2017
+
+El thread 140287020087040 no encontró espacios suficientes. 
+	Solicitaba 2 segmentos. 
+	Hora: Wed Oct 25 01:49:52 2017
+
+El thread 140287020087040 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:49:57 2017
+
+El thread 140287045265152 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:50:12 2017
+
+El thread 140287045265152 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:50:17 2017
+
+El thread 140287045265152 no encontró espacios suficientes. 
+	Solicitaba 1 segmentos. 
+	Hora: Wed Oct 25 01:50:27 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:50:37 2017
+
+El thread 140287053657856 no encontró espacios suficientes. 
+	Solicitaba 3 segmentos. 
+	Hora: Wed Oct 25 01:50:42 2017
+
+El thread 140673905202944 no encontró espacios suficientes. 
+	Solicitaba 4 segmentos. 
+	Hora: Wed Oct 25 01:55:38 2017
+
+El thread 140673905202944 no encontró espacios suficientes. 
+	Solicitaba 5 segmentos. 
+	Hora: Wed Oct 25 01:55:43 2017

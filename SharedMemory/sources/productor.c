@@ -7,6 +7,10 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
 {
     int size = read_int("../data/size.txt");
     int shm_id = read_int("../data/shm_id.txt");
+    pid_t proc_id = getpid();
+
+    // Guardar ID del proceso
+    save_int(proc_id, "../data/prod_id.txt");
 
     // Segmentacion
     if(strcmp(tipoAlgoritmo,"-s")==0)
@@ -40,11 +44,10 @@ void crear_hilos_paginas()
     while(true){
         n_paginas = random_number(1,10);
         pthread_create(&thread, 0, reservar_paginas, &n_paginas);
-
+        //reservar_paginas(&n_paginas);
         sleep((unsigned int)tiempo);
 
         if (n_paginas < -1) break;
-
     }
 }
 
@@ -61,7 +64,7 @@ void crear_hilos_segmentos()
             break;
         }
 
-        sleep((unsigned int) tiempo);
+        sleep((unsigned int) 5);
     }
 }
 
@@ -82,8 +85,10 @@ void registrar_proc(long estado, long thread_id)
 
     else{
         for (int i = 0; i < 500 ; ++i) {
-            if(array[i] == 0 || array[i] == STOP){
+            long a = array[i];
+            if((array[i] == 0) || (array[i] == STOP)){
                 array[i] = thread_id;
+                a = array[i];
                 break;
             }
         }
@@ -218,7 +223,7 @@ void * reservar_segmentos(void * argv){
 
             registrar_proc(ESPERA, (long) thread_id);
             ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
-            sleep((unsigned int) 4);
+            sleep((unsigned int) tiempo);
             liberar_proc(ESPERA, (long) thread_id);
 
 
@@ -267,6 +272,15 @@ void * reservar_segmentos(void * argv){
 
             registrar_proc(MUERTO, (long) thread_id);
         }
+    }
+
+    else
+    {
+        time = get_time();
+        sprintf(buf, "El thread %ld no encontró espacios suficientes. \n\tSolicitaba %d segmentos. \n\tHora: %s", (long)thread_id, n_segmentos, time);
+        registrar_accion("../data/bitacora_fallidos.txt", buf);
+
+        registrar_proc(MUERTO, (long) thread_id);
     }
 
     ver_memoria_segmentada(*(int *)shm_addr, (void *) memoria);
