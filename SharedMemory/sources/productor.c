@@ -3,7 +3,7 @@
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-void producir(char * tipoAlgoritmo, int distribucion_generador)
+void producir(char *tipoAlgoritmo)
 {
     int size = read_int("../data/size.txt");
     int shm_id = read_int("../data/shm_id.txt");
@@ -29,8 +29,6 @@ void producir(char * tipoAlgoritmo, int distribucion_generador)
     else{
         printf("El tipo de algoritmo ingresado es desconocido, existen:\n\t-s segmentación\n\t-p paginación\n");
     }
-
-    //cerrar_sem(sem);
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -44,7 +42,7 @@ void crear_hilos_paginas()
     while(true){
         n_paginas = random_number(1,10);
         pthread_create(&thread, 0, reservar_paginas, &n_paginas);
-        //reservar_paginas(&n_paginas);
+
         sleep((unsigned int)tiempo);
 
         if (n_paginas < -1) break;
@@ -56,7 +54,6 @@ void crear_hilos_paginas()
 
 void crear_hilos_segmentos()
 {
-    int tiempo = random_number(30, 60);
     pthread_t thread;
 
     while(true){
@@ -85,10 +82,8 @@ void registrar_proc(long estado, long thread_id)
 
     else{
         for (int i = 0; i < 500 ; ++i) {
-            long a = array[i];
             if((array[i] == 0) || (array[i] == STOP)){
                 array[i] = thread_id;
-                a = array[i];
                 break;
             }
         }
@@ -132,13 +127,9 @@ void liberar_proc(long estado, long thread_id)
 
 void * reservar_segmentos(void * argv){
 
-//    int n_segmentos = 3;
     int n_segmentos = random_number(1,5);
-    int n_segmentos_aux = n_segmentos;
 
-//    int n_celdas_segmento = 3;
     int n_celdas_segmento = random_number(1,3);
-    int n_celdas_segmento_aux = n_celdas_segmento;
 
     sem_t * sem = (sem_t *) solicitar_sem(SEM_NAME);
     pthread_t thread_id = pthread_self();
@@ -483,6 +474,6 @@ void * ver_memoria_segmentada(int n_paginas, void * memoria_ref)
     for (int i = 0; i < n_paginas;i++) {
         printf("N-Segmento: %d | R.Base: %d | Tamanho: %d | Estado:%d | Proc.ID:%ld\n",
                memoria[i].n_segmento, memoria[i].reg_base, memoria[i].tamanho, memoria[i].estado, (long) memoria[i].thread_id);
-        //i = i + memoria[i].tamanho;
+
     }
 }

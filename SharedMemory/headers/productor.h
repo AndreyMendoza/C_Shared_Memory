@@ -5,7 +5,7 @@
 
 
 
-void producir(char * tipoAlgoritmo, int distribucion_generador);
+void producir(char *tipoAlgoritmo);
 void prod_paginas(int size, int shm_id);
 void prod_segmentos(int size, int shm_id);
 void crear_hilos_paginas();

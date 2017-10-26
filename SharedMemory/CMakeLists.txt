@@ -10,8 +10,7 @@ set(SOURCE_FILES main.c headers/imports.h
                         headers/finalizador.h       sources/finalizador.c
                         headers/herramientas.h      sources/herramientas.c
                         headers/pagina.h            sources/pagina.c
-                        headers/list.h              sources/list.c
-                        headers/segmento.h          sources/segmento.c)
+        headers/segmento.h          sources/segmento.c)
 
 
 find_package( Threads REQUIRED )

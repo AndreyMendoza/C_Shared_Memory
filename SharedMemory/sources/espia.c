@@ -11,7 +11,7 @@ void espiar_mem()
     int * tipo = (int *) (shm_addr + (sizeof(int) * 2));
 
     bloquear_sem(sem);
-    printf("\n---------------------   Estado de la memoria   ---------------------\n\n");
+    printf("\n---------------   Estado de la memoria   ---------------\n\n");
 
     if (* tipo == PAGINACION)
         ver_memoria_paginada(*(int *)shm_addr, (void *) memoria);
@@ -20,7 +20,7 @@ void espiar_mem()
     else
         printf("LA MEMORIA NO HA SIDO INICIALIZADA!");
 
-    printf("\n----------------------------   FIN   -------------------------------\n");
+    printf("\n---------------   FIN   ---------------\n");
     desbloquear_sem(sem);
 }
 
@@ -36,7 +36,7 @@ void espiar_proc(){
 
     long * array = (long * ) shm_addr;
 
-    printf("\n---------------------   Estado de Procesos   ---------------------\n\n");
+    printf("\n---------------   Estado de Procesos   ---------------\n\n");
 
     //----- Proceso Activo ----
     printf("--------> Proceso utilizando memoria compartida <--------\n\t%ld", array[0]);
@@ -82,6 +82,6 @@ void espiar_proc(){
         }
     }
 
-    printf("\n\n--------------------------   FIN   -----------------------------\n\n");
+    printf("\n\n---------------   FIN   ---------------\n\n");
     desbloquear_sem(sem);
 }

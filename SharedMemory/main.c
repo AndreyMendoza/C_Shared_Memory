@@ -31,11 +31,7 @@ int main(int argc, char **argv) {
         else{
             char * tipoAlgoritmo = argv[1];
 
-            // La Distribución con la que se generaran los procesos
-            // estará determinada por un tiempo aleatorio(30s-60s)
-            int distribucion_generador = random_number(30,60);
-
-            producir(tipoAlgoritmo, distribucion_generador);
+            producir(tipoAlgoritmo);
         }
     }
     //Ejemplo-> ./espia men

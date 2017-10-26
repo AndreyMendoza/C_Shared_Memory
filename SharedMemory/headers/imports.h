@@ -16,7 +16,6 @@
 #include "espia.h"
 #include "finalizador.h"
 #include "herramientas.h"
-#include "list.h"
 #include "pagina.h"
 #include "segmento.h"
 #include <pthread.h>

@@ -123,28 +123,6 @@ void cerrar_sem(void * sem_ref)
     printf("OK\n");
 }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-
-void operar_semaforo(void * sem_ref, int operacion)
-{
-    sem_t * sem = (sem_t *) sem_ref;
-    if (operacion == 1 )
-    {
-        printf("Incrementando el semaforo...");
-        sem_post (sem);
-    }
-    else  if (operacion ==  -1 )
-    {
-        printf("Decrementando el semaforo...");
-        sem_wait (sem);
-    }
-    else  if (operacion == 2 ){
-        printf("Limpiando semaforo...");
-        sem_close (sem);
-        sem_unlink (SEM_NAME);
-    }
-    printf("OK\n");
-}
 
 /*####################################################################################################################*/
 /*###############################################   Generales   ######################################################*/
